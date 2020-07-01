@@ -16,7 +16,7 @@ const TO_SEARCH: &'static str = "
 ";
 
 fn main() {
-    let re_mac = Regex::new(r"link/\w+ (\d{2}):(\d{2}):(\d{2}):([[:xdigit:]]{2}):(\d{2}):(\d{2})").unwrap();
+    let re_mac = Regex::new(r"link/\w+ ([[:xdigit:]]{2}):([[:xdigit:]]{2}):([[:xdigit:]]{2}):([[:xdigit:]]{2}):([[:xdigit:]]{2}):([[:xdigit:]]{2})").unwrap();
 
     for caps in re_mac.captures_iter(TO_SEARCH) {
         println!("mac is {}:{}:{}:{}:{}:{}",
